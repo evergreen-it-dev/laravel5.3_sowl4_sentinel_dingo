@@ -13,6 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', function ($api){
+    $api->post('authenticate', 'App\Http\Controllers\ApiAuthController@authenticate');
+    $api->post('register', 'App\Http\Controllers\ApiAuthController@register');
+});
+
+$api->version('v1', ['middleware' => 'jwt.auth'], function ($api){
+    $api->get('refresh_token', 'App\Http\Controllers\ApiAuthController@refreshToken');
+    $api->get('posts', 'App\Http\Controllers\PostController@getPosts');
+});

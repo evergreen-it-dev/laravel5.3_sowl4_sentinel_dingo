@@ -155,7 +155,7 @@ return [
         |
         */
 
-        'auth' => 'Tymon\JWTAuth\Providers\Auth\IlluminateAuthAdapter',
+        'auth' => \App\Http\Repositories\Auth\SentinelAuthAdapter::class,
 
         /*
         |--------------------------------------------------------------------------
@@ -166,7 +166,7 @@ return [
         |
         */
 
-        'storage' => 'Tymon\JWTAuth\Providers\Storage\IlluminateCacheAdapter',
+        'storage' => Tymon\JWTAuth\Providers\Storage\IlluminateCacheAdapter::class,
 
     ],
 
