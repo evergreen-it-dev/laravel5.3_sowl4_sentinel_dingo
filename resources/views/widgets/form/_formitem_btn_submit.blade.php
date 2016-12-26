@@ -1,0 +1,1 @@
+{!! Form::submit($title, array('class' => 'btn btn-lg btn-primary btn-block')) !!}

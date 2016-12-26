@@ -78,6 +78,15 @@
                     Laravel
                 </div>
 
+                <?php
+                if ($user = Sentinel::getUser())
+                {
+                    echo 'Привет, ' . $user->email;
+                }else{
+                    echo 'Привет, гость';
+                }
+                ?>
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
