@@ -1,7 +1,7 @@
 <h1>Админ-пакет для Laravel 5.3 + Sleeping Owl4 + Sentinel + Dingo</h1>
 
 <p>Папкет на базе SleepingOwlAdmin 4-ой версии и добавили к ней управление пользователями, ролями и правами через пакет Sentinel. А также добавили регистрацию и авторизацию через Facebook, Google+, VKontakte и реализовали заготовку под REST/RESTful API с помощью пакета Dingo.</p>
-<p>Вопросы пишите на support@evergreens.com.ua</p>
+<p>Вопросы пишите на <a href="mailto:support@evergreens.com.ua">support@evergreens.com.ua</a></p>
 
 <h2>Инструкция по установке и настройке</h2> <p>Мы не будем рассматривать вопросы настройки окружения, установки и первоначальной настройки фреймворка. Начнем с той точки, когда у нас установлен laravel версии 5.3.* и подключен к БД. В .env указан URL приложения, например http://mysite.com и домен под API:</p>
 <pre><code>APP_URL=http://mysite.com
