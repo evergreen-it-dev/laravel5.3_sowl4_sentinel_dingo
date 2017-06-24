@@ -21,7 +21,7 @@ return [
     |
     */
 
-    'secret' => env('JWT_SECRET', 'PEH7wh6StVBCDOmkDZ62yXZra0L82561'),
+    'secret' => env('JWT_SECRET', '3gjnDNzFNE4ujHeMKkrQfj5lQDNX2tBt'),
 
     /*
     |--------------------------------------------------------------------------
@@ -105,7 +105,7 @@ return [
     | Blacklist Enabled
     |--------------------------------------------------------------------------
     |
-    | In order to invalidate tokens, you must have the the blacklist enabled.
+    | In order to invalidate tokens, you must have the blacklist enabled.
     | If you do not want or need this functionality, then set this to false.
     |
     */

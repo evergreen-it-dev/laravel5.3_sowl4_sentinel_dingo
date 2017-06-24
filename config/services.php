@@ -53,5 +53,4 @@ return [
         'redirect' => env('VKONTAKTE_REDIRECT_URI'),
     ],
 
-
 ];

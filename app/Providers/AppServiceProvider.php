@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Request;
 use App\Role;
 use App\Permit;
@@ -16,6 +17,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
+
         Role::saving(function ($role) {
             $permits = Request::get('permits');
             $role->setPermissions([]);
@@ -26,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
                     $role->addPermission($permit->slug);
                 }
             }
-            if ( ! $permits) return;
+            if (!$permits) return;
         });
     }
 
