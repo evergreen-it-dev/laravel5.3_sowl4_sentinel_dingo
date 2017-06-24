@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "17fea2fb8749923e11c7004a679b6e95",
+    "content-hash": "478bcde55691edef1d6d610e46f24ab0",
     "packages": [
         {
             "name": "cartalyst/sentinel",
@@ -1607,17 +1607,11 @@
         },
         {
             "name": "laravelrus/sleepingowl",
-            "version": "dev-development",
+            "version": "dev-customb9e1420",
             "source": {
                 "type": "git",
-                "url": "https://github.com/LaravelRUS/SleepingOwlAdmin.git",
+                "url": "https://github.com/evergreen-it-dev/SleepingOwlAdmin.git",
                 "reference": "b9e142097bc50dc5b48300c226337be4d1ef9d21"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LaravelRUS/SleepingOwlAdmin/zipball/b9e142097bc50dc5b48300c226337be4d1ef9d21",
-                "reference": "b9e142097bc50dc5b48300c226337be4d1ef9d21",
-                "shasum": ""
             },
             "require": {
                 "davejamesmiller/laravel-breadcrumbs": "^3.0",
@@ -1647,7 +1641,11 @@
                     "SleepingOwl\\Tests\\": "tests/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "classmap": [
+                    "tests/TestCase.php"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -1669,7 +1667,11 @@
                 "crud",
                 "laravel"
             ],
-            "time": "2017-06-24T00:20:00+00:00"
+            "support": {
+                "issues": "https://github.com/LaravelRUS/SleepingOwlAdmin/issues",
+                "source": "https://github.com/LaravelRUS/SleepingOwlAdmin"
+            },
+            "time": "2017-06-24 00:20:00"
         },
         {
             "name": "league/flysystem",
