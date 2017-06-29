@@ -8,10 +8,13 @@ class Post extends Model
 {
     private function getParentNameRecursively($parent_id)
     {
-        $parent = self::find($parent_id);
+        if(!$parent = self::find($parent_id)){
+            return '';
+        }
+        
         $parent_name = '';
 
-        if($parent && $parent->parent_id > 0){
+        if($parent->parent_id > 0){
             $parent_name .= $this->getParentNameRecursively($parent->parent_id) . ' > ';
         }
         return $parent_name . $parent->name;
@@ -24,6 +27,6 @@ class Post extends Model
         if($this->parent_id > 0){
             $hierarchical_name .= $this->getParentNameRecursively($this->parent_id) . ' > ' ;
         }
-        return $hierarchical_name .$this->name;
+        return $hierarchical_name . $this->name;
     }
 }
