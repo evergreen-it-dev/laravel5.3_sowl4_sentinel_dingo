@@ -11,7 +11,7 @@ class Post extends Model
         $parent = self::find($parent_id);
         $parent_name = '';
 
-        if($parent->parent_id > 0){
+        if($parent && $parent->parent_id > 0){
             $parent_name .= $this->getParentNameRecursively($parent->parent_id) . ' > ';
         }
         return $parent_name . $parent->name;
