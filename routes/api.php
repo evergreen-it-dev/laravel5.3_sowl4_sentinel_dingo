@@ -23,4 +23,5 @@ $api->version('v1', function ($api){
 $api->version('v1', ['middleware' => 'jwt.auth'], function ($api){
     $api->get('refresh_token', 'App\Http\Controllers\ApiAuthController@refreshToken');
     $api->get('posts', 'App\Http\Controllers\PostController@getPosts');
+    $api->post('upload', 'App\Http\Controllers\UploadController@storeFile');
 });

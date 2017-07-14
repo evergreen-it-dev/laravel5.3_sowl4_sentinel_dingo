@@ -241,6 +241,10 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
+        'ResponseHelp' => App\Helpers\ApiHelp::class,
     ],
+
+    'aws_bucket' => env('AWS_BUCKET'),
+    'aws_cloudfront_domain' => env('AWS_CLOUDFRONT_DOMAIN'),
 
 ];
