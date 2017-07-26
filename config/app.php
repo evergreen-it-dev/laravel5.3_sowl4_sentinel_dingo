@@ -246,5 +246,6 @@ return [
 
     'aws_bucket' => env('AWS_BUCKET'),
     'aws_cloudfront_domain' => env('AWS_CLOUDFRONT_DOMAIN'),
+    'aws_s3_expiry' => env('AWS_S3_EXPIRY', '+5 minutes'),
 
 ];

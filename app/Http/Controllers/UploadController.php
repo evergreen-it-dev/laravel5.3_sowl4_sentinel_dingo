@@ -48,7 +48,7 @@ class UploadController extends Controller
         $filename_arr = explode(".", $input['file']->getClientOriginalName());
 
         if(!empty($input['path']) && trim($input['path']) != '') {
-            $path = substr(trim($input['path']), -1) == '/' ? substr(trim($input['path']), 0, -1) : trim($input['path']);
+            $path = mb_substr(trim($input['path']), -1) == '/' ? mb_substr(trim($input['path']), 0, -1) : trim($input['path']);
         }else{
             $path = '';
         }
@@ -67,7 +67,7 @@ class UploadController extends Controller
         }
 
         $client = $s3->getDriver()->getAdapter()->getClient();
-        $expiry = "+5 minutes";
+        $expiry = config('app.aws_s3_expiry');
 
         $command = $client->getCommand('GetObject', [
             'Bucket' => config('app.aws_bucket'),
